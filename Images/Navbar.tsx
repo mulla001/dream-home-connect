@@ -27,35 +27,26 @@ const Navbar = () => {
           <div className="w-10 h-10 bg-gradient-gold rounded-lg flex items-center justify-center">
             <span className="text-primary font-bold text-xl">B</span>
           </div>
-          <span className={`font-display font-bold text-xl ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
+          <span className={`font-display font-bold text-xl ${isScrolled ? 'text-foreground' : 'text-white'}`}>
             BuildConnect
           </span>
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <a
-            href="#how-it-works"
-            className={`font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}
-          >
+          <a href="#how-it-works" className={`font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-foreground' : 'text-white'}`}>
             How It Works
           </a>
-          <a
-            href="#for-landowners"
-            className={`font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}
-          >
+          <a href="#for-landowners" className={`font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-foreground' : 'text-white'}`}>
             For Land Owners
           </a>
-          <a
-            href="#for-contractors"
-            className={`font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}
-          >
+          <a href="#for-contractors" className={`font-medium transition-colors hover:text-secondary ${isScrolled ? 'text-foreground' : 'text-white'}`}>
             For Contractors
           </a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button variant={isScrolled ? "ghost" : "heroOutline"} size="sm">
+          <Button variant={isScrolled ? "ghost" : "outline"} size="sm" className={`${isScrolled ? '' : 'text-white border-white/20'}`}>
             Login
           </Button>
           <Button variant="hero" size="sm">
@@ -69,9 +60,9 @@ const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} size={24} />
+            <X className={isScrolled ? 'text-foreground' : 'text-white'} size={24} />
           ) : (
-            <Menu className={isScrolled ? 'text-foreground' : 'text-primary-foreground'} size={24} />
+            <Menu className={isScrolled ? 'text-foreground' : 'text-white'} size={24} />
           )}
         </button>
       </div>

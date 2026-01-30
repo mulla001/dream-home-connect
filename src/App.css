@@ -1,8 +1,15 @@
+:root {
+  --app-max-width: 1280px;
+}
+
+/* Keep this file minimal to avoid globally overriding Tailwind layout utilities.
+   Use Tailwind classes for layout/spacing instead of global rules. */
+
+/* Ensure root element spans full width — container centering is handled by Tailwind's `container` class. */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
